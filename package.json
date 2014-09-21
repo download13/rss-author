@@ -1,0 +1,33 @@
+{
+  "name": "rss-author",
+  "version": "0.0.0",
+  "description": "Extracts name and email addresses from RSS author elements",
+  "main": "author.js",
+  "dependencies": {
+    "email-addresses": "^1.1.2"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "coveralls": "^2.11.1",
+    "mocha": "^1.21.4"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:download13/rss-author.git"
+  },
+  "keywords": [
+    "rss",
+    "author",
+    "email",
+    "name"
+  ],
+  "author": "Erin Dachtler <download333@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/download13/rss-author/issues"
+  },
+  "homepage": "https://github.com/download13/rss-author"
+}
