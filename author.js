@@ -6,7 +6,7 @@ var separated = /<(.+)>|\((.+)\)/;
 
 function parseAuthor(str) {
 	var email = null, name = null;
-	str = str.trim();
+	str = (str || '').trim();
 
 	// Stuff comes in looking like this sometimes: email@domain.tld (Person Surname)
 	// We should account for variations though (<> instead of (), switched order)

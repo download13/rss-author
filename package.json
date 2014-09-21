@@ -1,6 +1,6 @@
 {
   "name": "rss-author",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Extracts name and email addresses from RSS author elements",
   "main": "author.js",
   "dependencies": {
