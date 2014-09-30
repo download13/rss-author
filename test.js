@@ -66,8 +66,8 @@ describe('rss-author', function() {
 		assert.equal(r.email, 'test@example.com');
 	});
 
-	it('should find a raw name', function() {
-		var r = parseAuthor('Testy McTesterson');
+	it('should find a raw name stripping whitespace', function() {
+		var r = parseAuthor('  Testy McTesterson   ');
 
 		assert.equal(r.name, 'Testy McTesterson');
 		assert.equal(r.email, null);
@@ -106,5 +106,12 @@ describe('rss-author', function() {
 
 		assert.equal(r.email, 'an@address.net');
 		assert.equal(r.name, null);
+	});
+
+	it('should handle unicode names', function() {
+		var r = parseAuthor('האץ <randomcharacters@gmail.com>');
+
+		assert.equal(r.email, 'randomcharacters@gmail.com');
+		assert.equal(r.name, 'האץ');
 	});
 });
